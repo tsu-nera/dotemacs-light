@@ -50,3 +50,17 @@
 (setq display-time-day-and-date t)
 (setq display-time-24hr-format t)
 (display-time)
+
+
+;; 最近開いたファイル
+(require 'recentf)
+(when (require 'recentf nil t)
+  (setq recentf-max-saved-items 2000)
+  (setq recentf-exclude '(".recentf"))
+  (setq recentf-auto-cleanup 10)
+  (setq recentf-auto-save-timer
+        (run-with-idle-timer 30 t 'recentf-save-list))
+  (recentf-mode 1))
+(global-set-key (kbd "C-x C-r") 'recentf-open-files)
+
+;; end config
