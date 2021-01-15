@@ -26,7 +26,7 @@
 ;; メニューバーの非表示
 (menu-bar-mode -1)
 ;; ツールバーの非表示
-;; (tool-bar-mode -1)
+(tool-bar-mode -1)
 ;; バックアップファイルを作成させない
 (setq make-backup-files nil)
 ;; 終了時にオートセーブファイルを削除する
